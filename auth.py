@@ -26,7 +26,7 @@ def get_access_token():
 def get_access_token_secret():
     with open(BOT_CREDS, "r") as file:
         secret = file.readline()
-        return file.readline()[:-1]
+        return file.readline()[:-2]
 
 if __name__ == "__main__":
     print("secret key: " + get_secret())
@@ -35,3 +35,4 @@ if __name__ == "__main__":
 
     print("bot access: " + get_access_token())
     print("bot secret: " + get_access_token_secret())
+
